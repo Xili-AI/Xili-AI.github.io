@@ -42,7 +42,9 @@ jobs:
         run: node tools/gen-stats.js
 
       - name: Render the animated SVG assets
-        run: node tools/gen-visuals.js
+        run: |
+          node tools/gen-visuals.js
+          node tools/gen-sections.js
 
       - name: Push the org profile README
         working-directory: ${{ runner.temp }}/.github

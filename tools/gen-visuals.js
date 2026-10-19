@@ -85,7 +85,7 @@ ${body}
 
 function heroSvg(data) {
   const W = 1000;
-  const H = 300;
+  const H = 314;
   const logo = dataUri(path.join(IMG, 'logo.png'));
   const robot = dataUri(path.join(IMG, '3D.png'));
 

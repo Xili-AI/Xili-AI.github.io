@@ -54,7 +54,10 @@ function inject(src, heading, html) {
   const lines = src.split('\n');
   const hi = lines.findIndex((l) => l.trim() === heading);
   if (hi < 0) {
-    throw new Error(`heading "${heading}" not found in profile/README.md`);
+    // The profile README renders most of its content as SVG sections, so a
+    // missing block is normal - skip it instead of failing the whole run.
+    log(`skip "${heading}" - block not present in the profile README`);
+    return src;
   }
   let ei = hi + 1;
   while (ei < lines.length && !/^#{1,6}\s/.test(lines[ei]) && lines[ei].trim() !== '---') {

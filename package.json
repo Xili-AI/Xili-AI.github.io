@@ -9,7 +9,9 @@
     "stats:offline": "node tools/gen-stats.js --offline",
     "stats:dry": "node tools/gen-stats.js --dry-run",
     "visuals": "node tools/gen-visuals.js",
-    "build": "npm run stats:offline && npm run visuals && npm run preview"
+    "build": "npm run stats:offline && npm run visuals && npm run sections && npm run preview",
+    "sections": "node tools/gen-sections.js",
+    "check": "node tools/check-visuals.js"
   },
   "dependencies": {
     "marked": "^18.1.1"
