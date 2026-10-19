@@ -19,7 +19,7 @@
 <g class="bar" style="animation-delay:0.60s" opacity=".4"><polygon points="548,295 569,305 569,310 548,300" fill="#2b4f9e" stroke="#0b1b3a" stroke-width="1"/><polygon points="569,305 590,295 590,300 569,310" fill="#1b3358" stroke="#0b1b3a" stroke-width="1"/><polygon points="569,285 590,295 569,305 548,295" fill="#9fe9ff" stroke="#0b1b3a" stroke-width="1"/></g>
 <g class="bar" style="animation-delay:0.72s" opacity=".4"><polygon points="634,295 655,305 655,310 634,300" fill="#2b4f9e" stroke="#0b1b3a" stroke-width="1"/><polygon points="655,305 676,295 676,300 655,310" fill="#1b3358" stroke="#0b1b3a" stroke-width="1"/><polygon points="655,285 676,295 655,305 634,295" fill="#9fe9ff" stroke="#0b1b3a" stroke-width="1"/></g>
 <g class="bar" style="animation-delay:0.84s" opacity=".4"><polygon points="720,295 741,305 741,310 720,300" fill="#2b4f9e" stroke="#0b1b3a" stroke-width="1"/><polygon points="741,305 762,295 762,300 741,310" fill="#1b3358" stroke="#0b1b3a" stroke-width="1"/><polygon points="741,285 762,295 741,305 720,295" fill="#9fe9ff" stroke="#0b1b3a" stroke-width="1"/></g>
-<text x="139" y="113" font-family="monospace" font-size="15" font-weight="normal" fill="#eaf7ff" text-anchor="middle" letter-spacing="0" opacity="1" >103</text>
+<text x="139" y="113" font-family="monospace" font-size="15" font-weight="normal" fill="#eaf7ff" text-anchor="middle" letter-spacing="0" opacity="1" >96</text>
 <text x="139" y="334" font-family="monospace" font-size="12" font-weight="normal" fill="#8fb3e8" text-anchor="middle" letter-spacing="0" opacity="1" >TomSunzzzx</text>
 <text x="225" y="272" font-family="monospace" font-size="15" font-weight="normal" fill="#eaf7ff" text-anchor="middle" letter-spacing="0" opacity="1" >8</text>
 <text x="225" y="334" font-family="monospace" font-size="12" font-weight="normal" fill="#8fb3e8" text-anchor="middle" letter-spacing="0" opacity="1" >RealTapeL</text>
@@ -36,6 +36,6 @@
 <text x="741" y="283" font-family="monospace" font-size="15" font-weight="normal" fill="#eaf7ff" text-anchor="middle" letter-spacing="0" opacity="1" >0</text>
 <text x="741" y="334" font-family="monospace" font-size="12" font-weight="normal" fill="#8fb3e8" text-anchor="middle" letter-spacing="0" opacity="1" >Zia-ZYH</text>
 <text x="440" y="42" font-family="monospace" font-size="16" font-weight="normal" fill="#fff" text-anchor="middle" letter-spacing="2" opacity="1" >COMMITS BY MEMBER</text>
-<text x="440" y="68" font-family="monospace" font-size="15" font-weight="normal" fill="#6d8ec2" text-anchor="middle" letter-spacing="0" opacity="1" >8 member(s) · 115 commit(s)</text>
+<text x="440" y="68" font-family="monospace" font-size="15" font-weight="normal" fill="#6d8ec2" text-anchor="middle" letter-spacing="0" opacity="1" >8 member(s) · 108 commit(s)</text>
 
 </svg>

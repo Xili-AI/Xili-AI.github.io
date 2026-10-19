@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T15:28:28.425Z",
+  "generatedAt": "2026-10-19T15:30:58.071Z",
   "orgName": "Xili-AI",
   "org": {
     "login": "Xili-AI",
@@ -25,10 +25,10 @@
       "topics": [],
       "license": "",
       "createdAt": "2026-10-19T14:24:52Z",
-      "pushedAt": "2026-10-19T15:18:25Z",
+      "pushedAt": "2026-10-19T15:29:40Z",
       "defaultBranch": "main",
-      "commits": 7,
-      "commitAuthors": 1
+      "commits": 0,
+      "commitAuthors": 0
     },
     {
       "name": "AutoLabel",
@@ -112,7 +112,7 @@
     }
   ],
   "languages": {
-    "JavaScript": 95193,
+    "JavaScript": 95132,
     "CSS": 27756,
     "HTML": 18150,
     "Python": 1695547,
@@ -126,9 +126,8 @@
     {
       "login": "TomSunzzzx",
       "avatar": "https://avatars.githubusercontent.com/u/179244394?v=4",
-      "commits": 103,
+      "commits": 96,
       "repos": [
-        "Xili-AI.github.io",
         "AutoLabel",
         "Xili-ReportRAG",
         "XiLiDocument"
