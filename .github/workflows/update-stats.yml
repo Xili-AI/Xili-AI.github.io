@@ -16,6 +16,10 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GIT_TERMINAL_PROMPT: "0"
+      GIT_ASKPASS: echo
     steps:
       - uses: actions/checkout@v4
 
@@ -62,8 +66,6 @@ jobs:
           fi
 
       - name: Push the site data snapshot
-        env:
-          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
