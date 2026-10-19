@@ -1,0 +1,71 @@
+name: Update org data
+
+on:
+  schedule:
+    # 03:17 UTC daily - keeps the site data and the org profile tables fresh
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-org-data
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check out the org profile repo
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: |
+          git clone --depth 1 \
+            "https://x-access-token:${PROFILE_TOKEN}@github.com/Xili-AI/.github.git" \
+            "${{ runner.temp }}/.github"
+
+      - name: Fetch org data and inject it into the profile README
+        env:
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN }}
+          GITHUB_ORG: Xili-AI
+          PROFILE_REPO: ${{ runner.temp }}/.github
+        run: node tools/gen-stats.js
+
+      - name: Push the org profile README
+        working-directory: ${{ runner.temp }}/.github
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          if git diff --staged --quiet; then
+            echo "profile unchanged"
+          else
+            git commit -m "chore(data): refresh org profile tables"
+            git push
+          fi
+
+      - name: Push the site data snapshot
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/stats/snapshot.json
+          if git diff --staged --quiet; then
+            echo "snapshot unchanged"
+          else
+            git commit -m "chore(data): refresh org data snapshot"
+            git push
+          fi

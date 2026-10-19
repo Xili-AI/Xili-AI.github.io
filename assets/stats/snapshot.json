@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-10-19T00:00:00.000Z",
+  "orgName": "Xili-AI",
+  "org": {
+    "login": "Xili-AI",
+    "name": "Xili-AI",
+    "description": "",
+    "followers": 3,
+    "publicRepos": 1,
+    "createdAt": "2026-05-01T00:00:00Z"
+  },
+  "repos": [
+    {
+      "name": "Xili-ReportRAG",
+      "fullName": "Xili-AI/Xili-ReportRAG",
+      "description": "质量部知识库管理系统：LLM + 向量检索 + 知识图谱的 8D 质量报告知识库",
+      "private": true,
+      "fork": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 686710,
+      "language": "Python",
+      "topics": [],
+      "license": "",
+      "createdAt": "2026-05-06T00:00:00Z",
+      "pushedAt": "2026-10-13T00:00:00Z",
+      "defaultBranch": "main",
+      "commits": 120,
+      "commitAuthors": 4
+    },
+    {
+      "name": "AutoLabel",
+      "fullName": "Xili-AI/AutoLabel",
+      "description": "基于 tkinter + ultralytics YOLO 的桌面端自动标注 / 模型训练工具",
+      "private": true,
+      "fork": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 218,
+      "language": "Python",
+      "topics": [],
+      "license": "",
+      "createdAt": "2026-09-26T00:00:00Z",
+      "pushedAt": "2026-09-26T00:00:00Z",
+      "defaultBranch": "main",
+      "commits": 1,
+      "commitAuthors": 1
+    }
+  ],
+  "languages": {
+    "Python": 1736796,
+    "Vue": 1477307,
+    "TypeScript": 741467,
+    "Markdown": 349068
+  },
+  "contributors": [
+    {
+      "login": "Tomsunzzzx",
+      "avatar": "https://github.com/Tomsunzzzx.png",
+      "commits": 97,
+      "repos": [
+        "Xili-ReportRAG",
+        "AutoLabel"
+      ]
+    },
+    {
+      "login": "Xili-AI",
+      "avatar": "https://github.com/Xili-AI.png",
+      "commits": 13,
+      "repos": [
+        "Xili-ReportRAG"
+      ]
+    },
+    {
+      "login": "RealTapeL",
+      "avatar": "https://github.com/RealTapeL.png",
+      "commits": 6,
+      "repos": [
+        "Xili-ReportRAG"
+      ]
+    },
+    {
+      "login": "Ksing",
+      "avatar": "https://github.com/Ksing.png",
+      "commits": 5,
+      "repos": [
+        "Xili-ReportRAG"
+      ]
+    }
+  ]
+}
