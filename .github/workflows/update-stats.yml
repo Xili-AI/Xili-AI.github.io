@@ -41,6 +41,9 @@ jobs:
           PROFILE_REPO: ${{ runner.temp }}/.github
         run: node tools/gen-stats.js
 
+      - name: Render the animated SVG assets
+        run: node tools/gen-visuals.js
+
       - name: Push the org profile README
         working-directory: ${{ runner.temp }}/.github
         env:
@@ -62,10 +65,10 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/stats/snapshot.json
+          git add assets/stats/snapshot.json assets/vis
           if git diff --staged --quiet; then
             echo "snapshot unchanged"
           else
-            git commit -m "chore(data): refresh org data snapshot"
+            git commit -m "chore(data): refresh org data snapshot and visuals"
             git push
           fi

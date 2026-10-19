@@ -1,13 +1,15 @@
 {
-  "name": "xili-ai-profile",
+  "name": "xili-ai-site",
   "version": "1.0.0",
   "private": true,
-  "description": "XILI-AI organization profile page (pixel + 3D) and its self-hosted stats generator",
+  "description": "XILI-AI official site (GitHub Pages) and the self-hosted stats generator",
   "scripts": {
     "preview": "node tools/preview.js",
     "stats": "node tools/gen-stats.js",
     "stats:offline": "node tools/gen-stats.js --offline",
-    "stats:dry": "node tools/gen-stats.js --dry-run"
+    "stats:dry": "node tools/gen-stats.js --dry-run",
+    "visuals": "node tools/gen-visuals.js",
+    "build": "npm run stats:offline && npm run visuals && npm run preview"
   },
   "dependencies": {
     "marked": "^18.1.1"
