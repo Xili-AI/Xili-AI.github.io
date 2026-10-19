@@ -46,11 +46,11 @@
 </g>
 <g class="badge b2">
   <rect x="420" y="250" width="122" height="30" rx="6" fill="#0f1e3c" stroke="#2f60c4" stroke-width="2"/>
-  <text x="481" y="271" font-family="monospace" font-size="14" font-weight="normal" fill="#cfe8ff" text-anchor="middle" letter-spacing="0" opacity="1" >📦 2 Repos</text>
+  <text x="481" y="271" font-family="monospace" font-size="14" font-weight="normal" fill="#cfe8ff" text-anchor="middle" letter-spacing="0" opacity="1" >📦 5 Repos</text>
 </g>
 <g class="badge b3">
   <rect x="554" y="250" width="138" height="30" rx="6" fill="#0f1e3c" stroke="#2f60c4" stroke-width="2"/>
-  <text x="623" y="271" font-family="monospace" font-size="14" font-weight="normal" fill="#cfe8ff" text-anchor="middle" letter-spacing="0" opacity="1" >⚡ 4 Members</text>
+  <text x="623" y="271" font-family="monospace" font-size="14" font-weight="normal" fill="#cfe8ff" text-anchor="middle" letter-spacing="0" opacity="1" >⚡ 8 Members</text>
 </g>
 
 </svg>

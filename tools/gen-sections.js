@@ -198,34 +198,34 @@ function stackSvg() {
 function statsSvg(data) {
   const repos = (data.repos || []).filter((r) => r.name !== '.github');
   const langs = Object.entries(data.languages || {}).sort((a, b) => b[1] - a[1]);
-  const cardH = 112;
-  const H = 112 + repos.length * (cardH + 18) + langs.slice(0, 6).length * 28 + 54;
+  const rowH = 66;
+  const langRows = langs.slice(0, 6);
+  const H = 108 + repos.length * (rowH + 12) + langRows.length * 28 + 48;
 
   let body = COMMON_DEFS + backdrop(W, H);
   body += sectionTitle(W / 2, 48, 'STATS', '数据由 GitHub REST API 直读生成');
 
-  // repo cards
-  const cw = (W - 120 - 20 * (repos.length - 1)) / Math.max(1, repos.length);
+  // repo rows
   const cy = 112;
   repos.forEach((r, i) => {
-    const x = 60 + i * (cw + 20);
-    const delay = (i * 0.4).toFixed(2);
+    const y = cy + i * (rowH + 12);
+    const delay = (i * 0.25).toFixed(2);
     body += `<g class="panel" style="animation-delay:${delay}s">`;
-    body += panel(x, cy, cw, cardH, { fill: 'url(#panelG)', stroke: '#2b4a86' });
-    body += text(x + 18, cy + 28, r.private ? '🔒' : '🌐', { size: 13 });
-    body += text(x + 38, cy + 28, r.name, { size: 13, fill: '#fff', family: FONT_MONO });
-    const p = paragraph(x + 18, cy + 52, r.description || '', cw - 36, { size: 11.5, fill: '#8fb3e8' });
-    body += p.svg;
+    body += panel(60, y, W - 120, rowH, { fill: 'url(#panelG)', stroke: '#2b4a86' });
+    body += text(84, y + 28, r.private ? '🔒' : '🌐', { size: 14 });
+    body += text(106, y + 28, r.name, { size: 14, fill: '#fff', family: FONT_MONO });
+    const d = paragraph(106, y + 50, r.description || '—', W - 240, { size: 12, fill: '#8fb3e8' });
+    body += d.svg;
     const met = `commits ${kfmt(r.commits || 0)}  ·  ★ ${kfmt(r.stars || 0)}  ·  ⑂ ${kfmt(r.forks || 0)}  ·  ${r.language || '—'}`;
-    body += text(x + 18, cy + cardH - 16, met, { size: 11, fill: '#6d8ec2', family: FONT_MONO });
+    body += text(W - 76, y + 28, met, { size: 11, fill: '#6d8ec2', anchor: 'end', family: FONT_MONO });
     body += '</g>';
   });
 
   // language bars
-  const ly = cy + repos.length * (cardH + 18) + 6;
+  const ly = cy + repos.length * (rowH + 12) + 10;
   const total = langs.reduce((s, e) => s + e[1], 0) || 1;
   body += text(60, ly, 'LANGUAGES', { size: 11, fill: '#6d8ec2', family: FONT_MONO, ls: '1' });
-  langs.slice(0, 6).forEach((l, i) => {
+  langRows.forEach((l, i) => {
     const y = ly + 16 + i * 28;
     const pct = l[1] / total;
     body += text(60, y + 11, l[0], { size: 12, fill: '#cfe8ff', family: FONT_MONO });

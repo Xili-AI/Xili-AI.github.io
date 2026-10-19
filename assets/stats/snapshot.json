@@ -1,95 +1,186 @@
 {
-  "generatedAt": "2026-10-19T00:00:00.000Z",
+  "generatedAt": "2026-10-19T15:28:28.425Z",
   "orgName": "Xili-AI",
   "org": {
     "login": "Xili-AI",
     "name": "Xili-AI",
-    "description": "",
+    "description": "Explore ultimate performance",
     "followers": 3,
-    "publicRepos": 1,
-    "createdAt": "2026-05-01T00:00:00Z"
+    "publicRepos": 2,
+    "createdAt": "2025-03-21T06:06:57Z"
   },
   "repos": [
     {
-      "name": "Xili-ReportRAG",
-      "fullName": "Xili-AI/Xili-ReportRAG",
-      "description": "质量部知识库管理系统：LLM + 向量检索 + 知识图谱的 8D 质量报告知识库",
-      "private": true,
+      "name": "Xili-AI.github.io",
+      "fullName": "Xili-AI/Xili-AI.github.io",
+      "description": "",
+      "private": false,
       "fork": false,
       "stars": 0,
       "forks": 0,
       "watchers": 0,
       "issues": 0,
-      "sizeKb": 686710,
-      "language": "Python",
+      "sizeKb": 358,
+      "language": "JavaScript",
       "topics": [],
       "license": "",
-      "createdAt": "2026-05-06T00:00:00Z",
-      "pushedAt": "2026-10-13T00:00:00Z",
+      "createdAt": "2026-10-19T14:24:52Z",
+      "pushedAt": "2026-10-19T15:18:25Z",
       "defaultBranch": "main",
-      "commits": 120,
-      "commitAuthors": 4
+      "commits": 7,
+      "commitAuthors": 1
     },
     {
       "name": "AutoLabel",
       "fullName": "Xili-AI/AutoLabel",
-      "description": "基于 tkinter + ultralytics YOLO 的桌面端自动标注 / 模型训练工具",
+      "description": "矽励系列-yolo自动标注（原金属粗糙度检测）",
       "private": true,
       "fork": false,
       "stars": 0,
       "forks": 0,
       "watchers": 0,
       "issues": 0,
-      "sizeKb": 218,
+      "sizeKb": 171,
       "language": "Python",
       "topics": [],
       "license": "",
-      "createdAt": "2026-09-26T00:00:00Z",
-      "pushedAt": "2026-09-26T00:00:00Z",
+      "createdAt": "2026-09-26T07:37:10Z",
+      "pushedAt": "2026-09-26T07:38:15Z",
+      "defaultBranch": "main",
+      "commits": 1,
+      "commitAuthors": 1
+    },
+    {
+      "name": "Xili-ReportRAG",
+      "fullName": "Xili-AI/Xili-ReportRAG",
+      "description": "矽励系列-质量部知识库管理系统",
+      "private": true,
+      "fork": false,
+      "stars": 2,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 614283,
+      "language": "Python",
+      "topics": [],
+      "license": "NOASSERTION",
+      "createdAt": "2026-04-27T10:16:41Z",
+      "pushedAt": "2026-10-13T07:44:42Z",
+      "defaultBranch": "main",
+      "commits": 101,
+      "commitAuthors": 3
+    },
+    {
+      "name": "XiLiDocument",
+      "fullName": "Xili-AI/XiLiDocument",
+      "description": "苏州矽励科技有限公司内部文档",
+      "private": true,
+      "fork": false,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 122,
+      "language": "",
+      "topics": [],
+      "license": "",
+      "createdAt": "2026-04-28T01:21:22Z",
+      "pushedAt": "2026-09-26T07:46:44Z",
+      "defaultBranch": "main",
+      "commits": 5,
+      "commitAuthors": 2
+    },
+    {
+      "name": "demo-repository",
+      "fullName": "Xili-AI/demo-repository",
+      "description": "A code repository designed to show the best GitHub has to offer.",
+      "private": true,
+      "fork": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 2,
+      "language": "HTML",
+      "topics": [],
+      "license": "",
+      "createdAt": "2025-03-21T06:13:54Z",
+      "pushedAt": "2025-03-21T06:13:55Z",
       "defaultBranch": "main",
       "commits": 1,
       "commitAuthors": 1
     }
   ],
   "languages": {
-    "Python": 1736796,
-    "Vue": 1477307,
-    "TypeScript": 741467,
-    "Markdown": 349068
+    "JavaScript": 95193,
+    "CSS": 27756,
+    "HTML": 18150,
+    "Python": 1695547,
+    "Vue": 627925,
+    "TypeScript": 101120,
+    "SCSS": 4100,
+    "Shell": 306,
+    "Batchfile": 226
   },
   "contributors": [
     {
-      "login": "Tomsunzzzx",
-      "avatar": "https://github.com/Tomsunzzzx.png",
-      "commits": 97,
+      "login": "TomSunzzzx",
+      "avatar": "https://avatars.githubusercontent.com/u/179244394?v=4",
+      "commits": 103,
       "repos": [
+        "Xili-AI.github.io",
+        "AutoLabel",
         "Xili-ReportRAG",
-        "AutoLabel"
-      ]
-    },
-    {
-      "login": "Xili-AI",
-      "avatar": "https://github.com/Xili-AI.png",
-      "commits": 13,
-      "repos": [
-        "Xili-ReportRAG"
+        "XiLiDocument"
       ]
     },
     {
       "login": "RealTapeL",
-      "avatar": "https://github.com/RealTapeL.png",
-      "commits": 6,
+      "avatar": "https://avatars.githubusercontent.com/u/167164141?v=4",
+      "commits": 8,
+      "repos": [
+        "Xili-ReportRAG",
+        "XiLiDocument",
+        "demo-repository"
+      ]
+    },
+    {
+      "login": "ksing-23",
+      "avatar": "https://avatars.githubusercontent.com/u/108170364?v=4",
+      "commits": 4,
       "repos": [
         "Xili-ReportRAG"
       ]
     },
     {
-      "login": "Ksing",
-      "avatar": "https://github.com/Ksing.png",
-      "commits": 5,
-      "repos": [
-        "Xili-ReportRAG"
-      ]
+      "login": "Qyx070426",
+      "avatar": "https://avatars.githubusercontent.com/u/266021858?v=4",
+      "commits": 0,
+      "repos": []
+    },
+    {
+      "login": "sc-collab",
+      "avatar": "https://avatars.githubusercontent.com/u/187844999?v=4",
+      "commits": 0,
+      "repos": []
+    },
+    {
+      "login": "wyy-byte",
+      "avatar": "https://avatars.githubusercontent.com/u/206524197?v=4",
+      "commits": 0,
+      "repos": []
+    },
+    {
+      "login": "xys44-swa",
+      "avatar": "https://avatars.githubusercontent.com/u/244667471?v=4",
+      "commits": 0,
+      "repos": []
+    },
+    {
+      "login": "Zia-ZYH",
+      "avatar": "https://avatars.githubusercontent.com/u/191321971?v=4",
+      "commits": 0,
+      "repos": []
     }
   ]
 }
