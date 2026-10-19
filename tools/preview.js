@@ -20,9 +20,16 @@ const OUT = path.join(REPO, 'preview.html');
 const md = fs.readFileSync(SRC, 'utf8');
 const html = marked.parse(md, { gfm: true, breaks: false });
 
-// GitHub resolves ../assets/... against the .github repo root; mirror that locally.
-const fixed = html.replace(/(src|href)="\.\.\/assets\/([^"]+)"/g,
-  (_m, a, p) => `${a}="file:///${REPO}/assets/${p}"`);
+// Point every asset at the local file so the preview works offline:
+//   ../assets/x.png                -> file:///<repo>/assets/x.png
+//   https://xili-ai.github.io/...  -> file:///<repo>/...
+// (paths must use forward slashes, browsers reject backslashes in file:// URLs)
+const posix = (p) => p.replace(/\\/g, '/');
+const REPO_URL = `file:///${posix(REPO)}`;
+const fixed = html
+  .replace(/(src|href)="\.\.\/assets\/([^"]+)"/g, (_m, a, p) => `${a}="${REPO_URL}/assets/${p}"`)
+  .replace(/(src|href)="https:\/\/xili-ai\.github\.io\/([^"]+)"/g,
+    (_m, a, p) => `${a}="${REPO_URL}/${p}"`);
 
 const shell = `<!DOCTYPE html>
 <html lang="zh-CN" data-color-mode="dark">
