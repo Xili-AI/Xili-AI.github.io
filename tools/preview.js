@@ -22,13 +22,16 @@ const html = marked.parse(md, { gfm: true, breaks: false });
 
 // Point every asset at the local file so the preview works offline:
 //   ../assets/x.png                -> file:///<repo>/assets/x.png
-//   https://xili-ai.github.io/...  -> file:///<repo>/...
+//   https://raw.githubusercontent.com/Xili-AI/Xili-AI.github.io/main/assets/x
+//   https://xili-ai.github.io/assets/x
 // (paths must use forward slashes, browsers reject backslashes in file:// URLs)
 const posix = (p) => p.replace(/\\/g, '/');
 const REPO_URL = `file:///${posix(REPO)}`;
 const fixed = html
   .replace(/(src|href)="\.\.\/assets\/([^"]+)"/g, (_m, a, p) => `${a}="${REPO_URL}/assets/${p}"`)
-  .replace(/(src|href)="https:\/\/xili-ai\.github\.io\/([^"]+)"/g,
+  .replace(/(src|href)="https:\/\/raw\.githubusercontent\.com\/Xili-AI\/Xili-AI\.github\.io\/main\/([^"?]+)(?:\?v=[a-z0-9]+)?"/g,
+    (_m, a, p) => `${a}="${REPO_URL}/${p}"`)
+  .replace(/(src|href)="https:\/\/xili-ai\.github\.io\/([^"?]+)(?:\?v=[a-z0-9]+)?"/g,
     (_m, a, p) => `${a}="${REPO_URL}/${p}"`);
 
 const shell = `<!DOCTYPE html>

@@ -13,8 +13,15 @@ const esc = (s) =>
     .replace(/\|/g, '\\|')     // keep table cells from breaking the row
     .replace(/\r?\n/g, ' ');   // keep table cells on one line
 
-/** Where the animated SVG assets are published. */
-const SITE = process.env.XILI_SITE_URL || 'https://xili-ai.github.io';
+/**
+ * Where the animated SVG assets are published.
+ *
+ * These are read straight from the repository through raw.githubusercontent.com
+ * rather than through the Pages URL, so the org profile picks up a new
+ * version the moment it is pushed - no Pages build in the queue.
+ */
+const VIS_BASE = process.env.XILI_VIS_BASE
+  || 'https://raw.githubusercontent.com/Xili-AI/Xili-AI.github.io/main/assets/vis';
 
 const kfmt = (n) => {
   if (n >= 1000000) return `${(n / 1000000).toFixed(1)}M`;
@@ -111,7 +118,7 @@ function renderContributors(data) {
     '',
     `合计 **${kfmt(totalCommits)}** 次提交，覆盖 **${totalRepos}** 个仓库。`,
     '',
-    `![成员贡献 3D 柱状图](${SITE}/assets/vis/contributors.svg)`,
+    `![成员贡献 3D 柱状图](${VIS_BASE}/contributors.svg)`,
     '',
     `> 数据由 \`Xili-AI/Xili-AI.github.io\` 仓库的 \`tools/gen-stats.js\` 直读 GitHub REST API 生成，覆盖闭源仓库。`,
   ].join('\n');

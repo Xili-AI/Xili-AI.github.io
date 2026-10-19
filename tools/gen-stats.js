@@ -101,8 +101,22 @@ async function main() {
   for (const [key, html] of Object.entries(blocks)) {
     readme = inject(readme, SECTIONS[key], html);
   }
+
+  // Cache-bust every visual asset so browsers fetch the freshly generated SVG
+  // instead of a cached copy of the previous one.
+  const stamp = Date.now().toString(36);
+  readme = readme.replace(
+    /(https:\/\/raw\.githubusercontent\.com\/Xili-AI\/Xili-AI\.github\.io\/main\/assets\/vis\/[a-z]+\.svg)(\?v=[a-z0-9]+)?/g,
+    (_m, url) => `${url}?v=${stamp}`
+  );
+  readme = readme.replace(
+    /(https:\/\/xili-ai\.github\.io\/assets\/vis\/[a-z]+\.svg)(\?v=[a-z0-9]+)?/g,
+    (_m, url) => `${url}?v=${stamp}`
+  );
+
   fs.writeFileSync(README, readme, 'utf8');
   log('injected blocks:', Object.keys(blocks).join(', '));
+  log('asset cache stamp:', stamp);
 
   fs.mkdirSync(path.dirname(SNAPSHOT), { recursive: true });
   fs.writeFileSync(
