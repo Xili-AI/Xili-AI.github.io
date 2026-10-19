@@ -209,3 +209,46 @@
     .then(render)
     .catch(fallback);
 })();
+
+/* ------------------------------------------------------------ mobile nav --- */
+(function () {
+  'use strict';
+
+  var burger = document.getElementById('site-burger');
+  var links = document.getElementById('site-links');
+  if (!burger || !links) return;
+
+  function setOpen(open) {
+    links.classList.toggle('is-open', open);
+    burger.classList.toggle('is-active', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单');
+  }
+
+  burger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(!links.classList.contains('is-open'));
+  });
+
+  // close after choosing a destination
+  links.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
+
+  // close when tapping anywhere else
+  document.addEventListener('click', function (e) {
+    if (!links.classList.contains('is-open')) return;
+    if (links.contains(e.target) || burger.contains(e.target)) return;
+    setOpen(false);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+
+  // a resize past the breakpoint should not leave the drawer stuck open
+  var mq = window.matchMedia('(min-width: 901px)');
+  var onChange = function (e) { if (e.matches) setOpen(false); };
+  if (mq.addEventListener) mq.addEventListener('change', onChange);
+  else if (mq.addListener) mq.addListener(onChange);
+})();
