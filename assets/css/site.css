@@ -31,19 +31,22 @@ body{
 a{color:var(--xl-cyan);}
 
 /* ============ 背景 ============ */
+/*
+ * 装饰层一律不使用 filter:blur() / mask-image / mix-blend-mode。
+ * 这三种写法在部分 Android GPU（Mali/Adreno）与旧版 Chromium 上会让
+ * 合成层直接失败，表现为整页白屏。改用渐变实现，视觉几乎一致。
+ */
 .bg-grid{
   position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background:
+  background-image:
+    linear-gradient(180deg,rgba(8,13,26,0) 0%,rgba(8,13,26,.55) 45%,rgba(8,13,26,.92) 78%),
     repeating-linear-gradient(0deg,rgba(95,211,243,.05) 0 1px,rgba(0,0,0,0) 1px 44px),
     repeating-linear-gradient(90deg,rgba(95,211,243,.05) 0 1px,rgba(0,0,0,0) 1px 44px);
-  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 80%);
-  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 80%);
 }
 .bg-glow{
   position:fixed;left:50%;top:-260px;z-index:-1;transform:translateX(-50%);
   width:1100px;height:620px;pointer-events:none;border-radius:50%;
-  background:radial-gradient(circle,rgba(58,110,216,.30) 0%,rgba(124,92,255,.12) 45%,rgba(0,0,0,0) 70%);
-  filter:blur(30px);
+  background:radial-gradient(ellipse at center,rgba(58,110,216,.30) 0%,rgba(124,92,255,.12) 45%,rgba(0,0,0,0) 70%);
 }
 
 /* ============ 导航 ============ */
@@ -54,8 +57,7 @@ a{color:var(--xl-cyan);}
 }
 .site-nav::before{
   content:'';position:absolute;inset:0;z-index:-1;
-  background:rgba(6,11,24,.72);backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
+  background:rgba(6,11,24,.94);
   border-bottom:1px solid rgba(47,96,196,.35);
 }
 .site-brand{display:flex;align-items:center;}
@@ -169,7 +171,7 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
 /* ============ 浮动机器人 ============ */
 .xl-float{
   animation:xl-float 4.2s ease-in-out infinite;
-  filter:drop-shadow(0 14px 22px rgba(0,0,0,.6)) drop-shadow(0 0 18px rgba(78,168,255,.35));
+  filter:drop-shadow(0 10px 16px rgba(0,0,0,.65));
 }
 @keyframes xl-float{
   0%,100%{transform:translateY(0) rotate(-1.5deg);}
@@ -253,7 +255,6 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
   position:absolute;left:50%;top:50%;width:470px;height:470px;border-radius:50%;
   pointer-events:none;
   background:radial-gradient(circle,rgba(95,211,243,.26) 0%,rgba(58,110,216,.14) 42%,rgba(0,0,0,0) 70%);
-  filter:blur(26px);
   animation:xl-cpu-glow 3.6s ease-in-out infinite;
 }
 @keyframes xl-cpu-glow{
@@ -261,7 +262,8 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
   50%{opacity:1;transform:translate(-50%,-50%) scale(1.08);}
 }
 .xl-cpu-tilt{
-  position:relative;width:var(--cw);height:var(--cw);transform-style:preserve-3d;
+  position:relative;width:var(--cw);height:var(--cw);
+  -webkit-transform-style:preserve-3d;transform-style:preserve-3d;
   animation:xl-cpu-float 10s ease-in-out infinite;
 }
 @keyframes xl-cpu-float{
@@ -279,15 +281,18 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
 }
 .xl-cpu-top::after{
   content:'';position:absolute;inset:0;border-radius:5px;pointer-events:none;
-  mix-blend-mode:screen;
-  background:linear-gradient(140deg,rgba(190,248,255,.42),rgba(124,92,255,.26));
+  background:linear-gradient(140deg,rgba(190,248,255,.38),rgba(124,92,255,.24));
   animation:xl-face-pulse 3.6s ease-in-out infinite;
 }
 @keyframes xl-face-pulse{0%,100%{opacity:.10;}50%{opacity:.62;}}
 
 /* 侧壁 */
-.xl-cpu-face{position:absolute;animation:xl-face-bright 3.6s ease-in-out infinite;}
-@keyframes xl-face-bright{0%,100%{filter:brightness(.66);}50%{filter:brightness(1.55);}}
+.xl-cpu-face{position:absolute;overflow:hidden;}
+.xl-cpu-face::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:rgba(190,248,255,.5);
+  animation:xl-face-pulse 3.6s ease-in-out infinite;
+}
 .xl-cpu-front{
   left:0;top:var(--cw);width:var(--cw);height:var(--ct);
   transform-origin:top center;transform:translateZ(var(--ct)) rotateX(-90deg);
@@ -305,7 +310,6 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
 .xl-cpu-pins{
   position:absolute;opacity:.9;
   background-image:repeating-linear-gradient(90deg,#e8c96a 0 7px,rgba(232,201,106,0) 7px 16px);
-  filter:drop-shadow(0 0 4px rgba(232,201,106,.35));
 }
 .xl-cpu-pins.pt{left:14px;right:14px;top:-13px;height:11px;}
 .xl-cpu-pins.pb{left:14px;right:14px;bottom:-13px;height:11px;}
@@ -346,8 +350,8 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
   animation:xl-die-core 3.6s ease-in-out infinite;
 }
 @keyframes xl-die-core{
-  0%,100%{opacity:.7;filter:drop-shadow(0 0 8px rgba(95,211,243,.45));}
-  50%{opacity:1;filter:drop-shadow(0 0 18px rgba(190,248,255,.95)) drop-shadow(0 0 44px rgba(78,168,255,.6));}
+  0%,100%{opacity:.72;}
+  50%{opacity:1;}
 }
 /* 电流粒子 */
 .xl-spark{
@@ -364,8 +368,7 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
 }
 /* 印在封装上的 logo */
 .xl-cpu-mark{
-  position:absolute;left:50%;bottom:15px;transform:translateX(-50%);width:130px;
-  opacity:1;filter:drop-shadow(0 0 8px rgba(95,211,243,.9)) drop-shadow(0 0 22px rgba(78,168,255,.6));
+  position:absolute;left:50%;bottom:15px;transform:translateX(-50%);width:130px;opacity:1;
 }
 /* 每次脉冲向外扩散的能量环 */
 .xl-cpu-wave{
@@ -375,8 +378,8 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
 }
 @keyframes xl-wave{
   0%{opacity:.5;transform:translate(-50%,-50%) scale(1);}
-  68%{opacity:0;transform:translate(-50%,-50%) scale(1.85);}
-  100%{opacity:0;transform:translate(-50%,-50%) scale(1.85);}
+  68%{opacity:0;transform:translate(-50%,-50%) scale(var(--wave-max,1.85));}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(var(--wave-max,1.85));}
 }
 
 /* ============ 3D 翻转卡片（项目） ============ */
@@ -386,12 +389,14 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
 }
 .xl-card{flex:1 1 320px;max-width:470px;height:300px;perspective:1200px;}
 .xl-card-inner{
-  position:relative;width:100%;height:100%;transform-style:preserve-3d;
+  position:relative;width:100%;height:100%;
+  -webkit-transform-style:preserve-3d;transform-style:preserve-3d;
   transition:transform .95s cubic-bezier(.22,.85,.25,1);
 }
 .xl-card:hover .xl-card-inner{transform:rotateY(180deg);}
 .xl-face{
-  position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  position:absolute;inset:0;
+  -webkit-backface-visibility:hidden;backface-visibility:hidden;
   border-radius:16px;padding:20px;text-align:left;
   background:linear-gradient(160deg,#15295b 0%,#0a1730 100%);
   border:2px solid #2f60c4;
@@ -558,7 +563,6 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
     padding:6px 18px 14px;padding-left:calc(18px + env(safe-area-inset-left));
     padding-right:calc(18px + env(safe-area-inset-right));
     background:rgba(6,11,24,.97);
-    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
     border-bottom:1px solid rgba(47,96,196,.45);
     box-shadow:0 16px 30px rgba(0,0,0,.55);
   }
@@ -622,8 +626,7 @@ main{max-width:var(--shell);margin:0 auto;padding:0 24px 40px;}
   .xl-term-bar::after{font-size:13px;right:10px;}
 
   /* 3D 芯片等比缩小 */
-  .xl-chip-stage{--cw:190px;--ct:21px;padding:44px 0 40px;min-height:300px;}
-  .xl-cpu-glow{width:330px;height:330px;}
+  .xl-chip-stage{--cw:190px;--ct:21px;--wave-max:1.45;padding:44px 0 40px;min-height:300px;}
   .xl-cpu-die img{width:76px;}
   .xl-cpu-mark{width:100px;bottom:12px;}
   .xl-cpu-die{inset:16px 16px 44px;}
