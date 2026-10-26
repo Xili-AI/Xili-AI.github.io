@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T08:24:58.345Z",
+  "generatedAt": "2026-10-26T08:55:03.071Z",
   "orgName": "Xili-AI",
   "org": {
     "login": "Xili-AI",
@@ -11,6 +11,26 @@
   },
   "repos": [
     {
+      "name": "Xili-ReportRAG",
+      "fullName": "Xili-AI/Xili-ReportRAG",
+      "description": "矽励系列-质量部知识库管理系统",
+      "private": true,
+      "fork": false,
+      "stars": 2,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 614362,
+      "language": "Python",
+      "topics": [],
+      "license": "NOASSERTION",
+      "createdAt": "2026-04-27T10:16:41Z",
+      "pushedAt": "2026-10-26T01:47:55Z",
+      "defaultBranch": "main",
+      "commits": 102,
+      "commitAuthors": 3
+    },
+    {
       "name": "Xili-AI.github.io",
       "fullName": "Xili-AI/Xili-AI.github.io",
       "description": "",
@@ -20,14 +40,14 @@
       "forks": 0,
       "watchers": 0,
       "issues": 0,
-      "sizeKb": 756,
+      "sizeKb": 757,
       "language": "JavaScript",
       "topics": [],
       "license": "",
       "createdAt": "2026-10-19T14:24:52Z",
-      "pushedAt": "2026-10-24T08:07:36Z",
+      "pushedAt": "2026-10-25T08:25:00Z",
       "defaultBranch": "main",
-      "commits": 19,
+      "commits": 20,
       "commitAuthors": 2
     },
     {
@@ -49,26 +69,6 @@
       "defaultBranch": "main",
       "commits": 1,
       "commitAuthors": 1
-    },
-    {
-      "name": "Xili-ReportRAG",
-      "fullName": "Xili-AI/Xili-ReportRAG",
-      "description": "矽励系列-质量部知识库管理系统",
-      "private": true,
-      "fork": false,
-      "stars": 2,
-      "forks": 0,
-      "watchers": 0,
-      "issues": 0,
-      "sizeKb": 614283,
-      "language": "Python",
-      "topics": [],
-      "license": "NOASSERTION",
-      "createdAt": "2026-04-27T10:16:41Z",
-      "pushedAt": "2026-10-13T07:44:42Z",
-      "defaultBranch": "main",
-      "commits": 101,
-      "commitAuthors": 3
     },
     {
       "name": "XiLiDocument",
@@ -112,26 +112,34 @@
     }
   ],
   "languages": {
-    "JavaScript": 97698,
-    "CSS": 32980,
-    "HTML": 18419,
-    "Python": 1695547,
+    "Python": 1697705,
     "Vue": 627925,
     "TypeScript": 101120,
+    "JavaScript": 97698,
     "SCSS": 4100,
-    "Shell": 306,
-    "Batchfile": 226
+    "CSS": 32980,
+    "Shell": 1259,
+    "Batchfile": 963,
+    "HTML": 18419
   },
   "contributors": [
     {
       "login": "TomSunzzzx",
       "avatar": "https://avatars.githubusercontent.com/u/179244394?v=4",
-      "commits": 108,
+      "commits": 109,
       "repos": [
+        "Xili-ReportRAG",
         "Xili-AI.github.io",
         "AutoLabel",
-        "Xili-ReportRAG",
         "XiLiDocument"
+      ]
+    },
+    {
+      "login": "github-actions[bot]",
+      "avatar": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "commits": 8,
+      "repos": [
+        "Xili-AI.github.io"
       ]
     },
     {
@@ -142,14 +150,6 @@
         "Xili-ReportRAG",
         "XiLiDocument",
         "demo-repository"
-      ]
-    },
-    {
-      "login": "github-actions[bot]",
-      "avatar": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 7,
-      "repos": [
-        "Xili-AI.github.io"
       ]
     },
     {
