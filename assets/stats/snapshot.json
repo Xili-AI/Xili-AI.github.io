@@ -1,35 +1,15 @@
 {
-  "generatedAt": "2026-10-27T08:59:39.234Z",
+  "generatedAt": "2026-10-28T09:39:29.739Z",
   "orgName": "Xili-AI",
   "org": {
     "login": "Xili-AI",
     "name": "Xili-AI",
     "description": "Explore ultimate performance",
     "followers": 3,
-    "publicRepos": 2,
+    "publicRepos": 3,
     "createdAt": "2025-03-21T06:06:57Z"
   },
   "repos": [
-    {
-      "name": "Xili-AI.github.io",
-      "fullName": "Xili-AI/Xili-AI.github.io",
-      "description": "",
-      "private": false,
-      "fork": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "issues": 0,
-      "sizeKb": 759,
-      "language": "JavaScript",
-      "topics": [],
-      "license": "",
-      "createdAt": "2026-10-19T14:24:52Z",
-      "pushedAt": "2026-10-26T08:55:07Z",
-      "defaultBranch": "main",
-      "commits": 21,
-      "commitAuthors": 2
-    },
     {
       "name": "Xili-ReportRAG",
       "fullName": "Xili-AI/Xili-ReportRAG",
@@ -40,15 +20,55 @@
       "forks": 0,
       "watchers": 0,
       "issues": 0,
-      "sizeKb": 614362,
+      "sizeKb": 604304,
       "language": "Python",
       "topics": [],
       "license": "NOASSERTION",
       "createdAt": "2026-04-27T10:16:41Z",
-      "pushedAt": "2026-10-26T01:47:55Z",
+      "pushedAt": "2026-10-28T08:15:56Z",
       "defaultBranch": "main",
-      "commits": 102,
+      "commits": 103,
       "commitAuthors": 3
+    },
+    {
+      "name": "XiLiServerSwitchManageSystem",
+      "fullName": "Xili-AI/XiLiServerSwitchManageSystem",
+      "description": "矽励系列-内网服务网关管理平台",
+      "private": false,
+      "fork": false,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 3561,
+      "language": "Vue",
+      "topics": [],
+      "license": "MIT",
+      "createdAt": "2026-10-27T13:52:10Z",
+      "pushedAt": "2026-10-27T13:57:24Z",
+      "defaultBranch": "main",
+      "commits": 1,
+      "commitAuthors": 1
+    },
+    {
+      "name": "Xili-AI.github.io",
+      "fullName": "Xili-AI/Xili-AI.github.io",
+      "description": "",
+      "private": false,
+      "fork": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 760,
+      "language": "JavaScript",
+      "topics": [],
+      "license": "",
+      "createdAt": "2026-10-19T14:24:52Z",
+      "pushedAt": "2026-10-27T08:59:41Z",
+      "defaultBranch": "main",
+      "commits": 22,
+      "commitAuthors": 2
     },
     {
       "name": "AutoLabel",
@@ -89,47 +109,29 @@
       "defaultBranch": "main",
       "commits": 5,
       "commitAuthors": 2
-    },
-    {
-      "name": "demo-repository",
-      "fullName": "Xili-AI/demo-repository",
-      "description": "A code repository designed to show the best GitHub has to offer.",
-      "private": true,
-      "fork": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "issues": 0,
-      "sizeKb": 2,
-      "language": "HTML",
-      "topics": [],
-      "license": "",
-      "createdAt": "2025-03-21T06:13:54Z",
-      "pushedAt": "2025-03-21T06:13:55Z",
-      "defaultBranch": "main",
-      "commits": 1,
-      "commitAuthors": 1
     }
   ],
   "languages": {
-    "JavaScript": 97698,
-    "CSS": 32980,
-    "HTML": 18419,
-    "Python": 1697705,
-    "Vue": 627925,
-    "TypeScript": 101120,
+    "Python": 1817704,
+    "Vue": 814136,
+    "TypeScript": 137667,
+    "JavaScript": 99422,
     "SCSS": 4100,
-    "Shell": 1259,
-    "Batchfile": 963
+    "CSS": 56104,
+    "Shell": 2139,
+    "Batchfile": 1162,
+    "HTML": 139308,
+    "PowerShell": 9959
   },
   "contributors": [
     {
       "login": "TomSunzzzx",
       "avatar": "https://avatars.githubusercontent.com/u/179244394?v=4",
-      "commits": 109,
+      "commits": 111,
       "repos": [
-        "Xili-AI.github.io",
         "Xili-ReportRAG",
+        "XiLiServerSwitchManageSystem",
+        "Xili-AI.github.io",
         "AutoLabel",
         "XiLiDocument"
       ]
@@ -137,7 +139,7 @@
     {
       "login": "github-actions[bot]",
       "avatar": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 9,
+      "commits": 10,
       "repos": [
         "Xili-AI.github.io"
       ]
@@ -145,11 +147,10 @@
     {
       "login": "RealTapeL",
       "avatar": "https://avatars.githubusercontent.com/u/167164141?v=4",
-      "commits": 8,
+      "commits": 7,
       "repos": [
         "Xili-ReportRAG",
-        "XiLiDocument",
-        "demo-repository"
+        "XiLiDocument"
       ]
     },
     {
