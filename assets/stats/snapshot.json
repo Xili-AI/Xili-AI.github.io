@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T09:39:29.739Z",
+  "generatedAt": "2026-10-29T09:58:02.861Z",
   "orgName": "Xili-AI",
   "org": {
     "login": "Xili-AI",
@@ -10,6 +10,26 @@
     "createdAt": "2025-03-21T06:06:57Z"
   },
   "repos": [
+    {
+      "name": "Xili-AI.github.io",
+      "fullName": "Xili-AI/Xili-AI.github.io",
+      "description": "",
+      "private": false,
+      "fork": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 762,
+      "language": "JavaScript",
+      "topics": [],
+      "license": "",
+      "createdAt": "2026-10-19T14:24:52Z",
+      "pushedAt": "2026-10-28T09:39:32Z",
+      "defaultBranch": "main",
+      "commits": 23,
+      "commitAuthors": 2
+    },
     {
       "name": "Xili-ReportRAG",
       "fullName": "Xili-AI/Xili-ReportRAG",
@@ -49,26 +69,6 @@
       "defaultBranch": "main",
       "commits": 1,
       "commitAuthors": 1
-    },
-    {
-      "name": "Xili-AI.github.io",
-      "fullName": "Xili-AI/Xili-AI.github.io",
-      "description": "",
-      "private": false,
-      "fork": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "issues": 0,
-      "sizeKb": 760,
-      "language": "JavaScript",
-      "topics": [],
-      "license": "",
-      "createdAt": "2026-10-19T14:24:52Z",
-      "pushedAt": "2026-10-27T08:59:41Z",
-      "defaultBranch": "main",
-      "commits": 22,
-      "commitAuthors": 2
     },
     {
       "name": "AutoLabel",
@@ -112,15 +112,15 @@
     }
   ],
   "languages": {
+    "JavaScript": 99422,
+    "CSS": 56104,
+    "HTML": 139308,
     "Python": 1817704,
     "Vue": 814136,
     "TypeScript": 137667,
-    "JavaScript": 99422,
     "SCSS": 4100,
-    "CSS": 56104,
     "Shell": 2139,
     "Batchfile": 1162,
-    "HTML": 139308,
     "PowerShell": 9959
   },
   "contributors": [
@@ -129,9 +129,9 @@
       "avatar": "https://avatars.githubusercontent.com/u/179244394?v=4",
       "commits": 111,
       "repos": [
+        "Xili-AI.github.io",
         "Xili-ReportRAG",
         "XiLiServerSwitchManageSystem",
-        "Xili-AI.github.io",
         "AutoLabel",
         "XiLiDocument"
       ]
@@ -139,7 +139,7 @@
     {
       "login": "github-actions[bot]",
       "avatar": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 10,
+      "commits": 11,
       "repos": [
         "Xili-AI.github.io"
       ]
