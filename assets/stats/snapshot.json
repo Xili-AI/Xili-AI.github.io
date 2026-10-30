@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T09:58:02.861Z",
+  "generatedAt": "2026-10-30T10:00:18.302Z",
   "orgName": "Xili-AI",
   "org": {
     "login": "Xili-AI",
@@ -11,26 +11,6 @@
   },
   "repos": [
     {
-      "name": "Xili-AI.github.io",
-      "fullName": "Xili-AI/Xili-AI.github.io",
-      "description": "",
-      "private": false,
-      "fork": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "issues": 0,
-      "sizeKb": 762,
-      "language": "JavaScript",
-      "topics": [],
-      "license": "",
-      "createdAt": "2026-10-19T14:24:52Z",
-      "pushedAt": "2026-10-28T09:39:32Z",
-      "defaultBranch": "main",
-      "commits": 23,
-      "commitAuthors": 2
-    },
-    {
       "name": "Xili-ReportRAG",
       "fullName": "Xili-AI/Xili-ReportRAG",
       "description": "矽励系列-质量部知识库管理系统",
@@ -40,15 +20,35 @@
       "forks": 0,
       "watchers": 0,
       "issues": 0,
-      "sizeKb": 604304,
+      "sizeKb": 604313,
       "language": "Python",
       "topics": [],
       "license": "NOASSERTION",
       "createdAt": "2026-04-27T10:16:41Z",
-      "pushedAt": "2026-10-28T08:15:56Z",
+      "pushedAt": "2026-10-29T11:20:31Z",
       "defaultBranch": "main",
-      "commits": 103,
+      "commits": 104,
       "commitAuthors": 3
+    },
+    {
+      "name": "Xili-AI.github.io",
+      "fullName": "Xili-AI/Xili-AI.github.io",
+      "description": "",
+      "private": false,
+      "fork": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 763,
+      "language": "JavaScript",
+      "topics": [],
+      "license": "",
+      "createdAt": "2026-10-19T14:24:52Z",
+      "pushedAt": "2026-10-29T09:58:05Z",
+      "defaultBranch": "main",
+      "commits": 24,
+      "commitAuthors": 2
     },
     {
       "name": "XiLiServerSwitchManageSystem",
@@ -112,25 +112,25 @@
     }
   ],
   "languages": {
+    "Python": 1821354,
+    "Vue": 830410,
+    "TypeScript": 137818,
     "JavaScript": 99422,
-    "CSS": 56104,
-    "HTML": 139308,
-    "Python": 1817704,
-    "Vue": 814136,
-    "TypeScript": 137667,
     "SCSS": 4100,
+    "CSS": 56104,
     "Shell": 2139,
     "Batchfile": 1162,
+    "HTML": 139308,
     "PowerShell": 9959
   },
   "contributors": [
     {
       "login": "TomSunzzzx",
       "avatar": "https://avatars.githubusercontent.com/u/179244394?v=4",
-      "commits": 111,
+      "commits": 112,
       "repos": [
-        "Xili-AI.github.io",
         "Xili-ReportRAG",
+        "Xili-AI.github.io",
         "XiLiServerSwitchManageSystem",
         "AutoLabel",
         "XiLiDocument"
@@ -139,7 +139,7 @@
     {
       "login": "github-actions[bot]",
       "avatar": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 11,
+      "commits": 12,
       "repos": [
         "Xili-AI.github.io"
       ]
