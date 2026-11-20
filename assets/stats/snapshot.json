@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T11:39:02.109Z",
+  "generatedAt": "2026-11-20T11:39:31.758Z",
   "orgName": "Xili-AI",
   "org": {
     "login": "Xili-AI",
@@ -11,6 +11,26 @@
   },
   "repos": [
     {
+      "name": "Xili-Infrastructure-Docs",
+      "fullName": "Xili-AI/Xili-Infrastructure-Docs",
+      "description": "苏州矽励科技基础设施文档",
+      "private": true,
+      "fork": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "issues": 0,
+      "sizeKb": 4,
+      "language": "",
+      "topics": [],
+      "license": "",
+      "createdAt": "2026-11-20T09:37:42Z",
+      "pushedAt": "2026-11-20T09:51:36Z",
+      "defaultBranch": "main",
+      "commits": 1,
+      "commitAuthors": 1
+    },
+    {
       "name": "Xili-AI.github.io",
       "fullName": "Xili-AI/Xili-AI.github.io",
       "description": "",
@@ -20,14 +40,14 @@
       "forks": 0,
       "watchers": 0,
       "issues": 0,
-      "sizeKb": 787,
+      "sizeKb": 788,
       "language": "JavaScript",
       "topics": [],
       "license": "",
       "createdAt": "2026-10-19T14:24:52Z",
-      "pushedAt": "2026-11-18T11:41:44Z",
+      "pushedAt": "2026-11-19T11:39:04Z",
       "defaultBranch": "main",
-      "commits": 44,
+      "commits": 45,
       "commitAuthors": 2
     },
     {
@@ -40,14 +60,14 @@
       "forks": 0,
       "watchers": 0,
       "issues": 0,
-      "sizeKb": 604478,
+      "sizeKb": 604542,
       "language": "Python",
       "topics": [],
       "license": "NOASSERTION",
       "createdAt": "2026-04-27T10:16:41Z",
-      "pushedAt": "2026-11-18T10:10:24Z",
+      "pushedAt": "2026-11-20T11:05:05Z",
       "defaultBranch": "main",
-      "commits": 113,
+      "commits": 115,
       "commitAuthors": 3
     },
     {
@@ -127,8 +147,9 @@
     {
       "login": "TomSunzzzx",
       "avatar": "https://avatars.githubusercontent.com/u/179244394?v=4",
-      "commits": 114,
+      "commits": 115,
       "repos": [
+        "Xili-Infrastructure-Docs",
         "Xili-AI.github.io",
         "Xili-ReportRAG",
         "XiLiServerSwitchManageSystem",
@@ -139,7 +160,7 @@
     {
       "login": "github-actions[bot]",
       "avatar": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 32,
+      "commits": 33,
       "repos": [
         "Xili-AI.github.io"
       ]
@@ -147,7 +168,7 @@
     {
       "login": "ksing-23",
       "avatar": "https://avatars.githubusercontent.com/u/108170364?v=4",
-      "commits": 11,
+      "commits": 13,
       "repos": [
         "Xili-ReportRAG"
       ]
